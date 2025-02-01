@@ -5,10 +5,10 @@
 
 ## Integrantes del equipo:
 
-* Cristian Camilo García Palacios (crgarciapa@unal.edu.co)
-* Camilo Andrés Herrera Gutiérrez (cherreragu@unal.edu.co)
-* Andrés Giovanni Sastoque González (asastoqueg@unal.edu.co)
-* Diego Fernando Waitoto Quintero (dwaitoto@unal.educ.co)
+* [Cristian Camilo García Palacios](https://github.com/CristianCamiloGarciaPalacios) (crgarciapa@unal.edu.co)
+* [Camilo Andrés Herrera Gutiérrez](https://github.com/camiloandherrera) (cherreragu@unal.edu.co)
+* [Andrés Giovanni Sastoque González](https://github.com/asastg) (asastoqueg@unal.edu.co)
+* [Diego Fernando Waitoto Quintero](https://github.com/asastg) (dwaitoto@unal.educ.co)
 
 # ProyecTrack
 ### [placeholder para ícono de proyecto]
@@ -21,5 +21,5 @@ ProyecTrack es una aplicación destinada a la gestión y entrega remota de proye
 # Tecnologías utilizadas
 
 Actualmente, el proyecto maneja las siguientes tecnologías para su funcionamiento:
-- React
-- Typescript
+- React-JS (Frontend)
+- FastAPI-Python (Backend)
