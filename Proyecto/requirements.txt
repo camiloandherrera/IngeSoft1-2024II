@@ -1,0 +1,2 @@
+fastapi[standard]==0.115.8
+asyncer==0.0.8
