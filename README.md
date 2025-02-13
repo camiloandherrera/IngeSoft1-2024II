@@ -1,7 +1,6 @@
 
 # 📓✍️ ProyecTrack 💻📊
 
-
 ## ⌨️ Ingeniería de Software 1 - 2024-2 G1 - Grupo 8 de Proyecto 🖱️
 Repositorio grupal: Asignaciones y Entregas de Proyecto
 
@@ -20,7 +19,7 @@ Repositorio grupal: Asignaciones y Entregas de Proyecto
 ProyecTrack es una aplicación destinada a la gestión y entrega remota de proyectos académicos, en donde profesores pueden crear y supervisar asignaciones, mientras que estudiantes pueden registrar avances y realizar entregas tanto intermedias como finales, en pro de la comunicación efectiva, seguimiento de progresos evaluación de entregas y entrega de retroalimentación de forma asíncrona y transparente.
 
 
-# 🧑‍💻Tecnologías utilizadas 💾
+# 🧑‍💻 Tecnologías utilizadas 💾
 
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-%23D71F00?style=flat&logo=sqlalchemy&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-ffca3a?style=flat&logo=python&logoColor=3776AB)
@@ -33,13 +32,17 @@ ProyecTrack es una aplicación destinada a la gestión y entrega remota de proye
 
 Actualmente, el proyecto maneja las siguientes tecnologías para su funcionamiento:
 
-#### Frontend
+#### 🪟 Frontend 🖱️
 - HTML5
 - JS
 - Vite
 - React
 
-#### Backend
+#### ⚙️ Backend ⌨️
 - Python
 - FastAPI
 - SQLAlchemy
+
+---
+## 👨‍🎨 Logotipo de la aplicación 📷
+![ProjecTrack](https://github.com/user-attachments/assets/4be2aee8-8df0-45a0-9142-338aed8b085d)
