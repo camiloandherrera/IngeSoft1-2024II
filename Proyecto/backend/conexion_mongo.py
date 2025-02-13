@@ -3,8 +3,7 @@
 from pymongo import MongoClient
 
 # Conexión a MongoDB
-MONGO_URI = """mongodb+srv://Administrador:PttuZVjgwQeAckM5@cluster0.kqodv.mongodb.net/
-?retryWrites=true&w=majority&appName=Cluster0"""
+MONGO_URI = "mongodb+srv://Administrador:PttuZVjgwQeAckM5@cluster0.kqodv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 cliente = MongoClient(MONGO_URI)
 
 # Selcets database and collection
