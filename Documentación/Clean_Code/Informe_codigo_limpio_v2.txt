@@ -1,0 +1,7 @@
+************* Module main
+main.py:9:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+main.py:10:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+
+------------------------------------------------------------------
+Your code has been rated at 5.00/10 (previous run: 2.50/10, +2.50)
+
