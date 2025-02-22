@@ -21,6 +21,7 @@ ProyecTrack es una aplicación destinada a la gestión y entrega remota de proye
 
 # 🧑‍💻 Tecnologías utilizadas 💾
 
+![MongoDB](https://img.shields.io/badge/MongoDB-white?style=flat&logo=mongodb&logoColor=%2347A248)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-%23D71F00?style=flat&logo=sqlalchemy&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-ffca3a?style=flat&logo=python&logoColor=3776AB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
@@ -42,6 +43,7 @@ Actualmente, el proyecto maneja las siguientes tecnologías para su funcionamien
 - Python
 - FastAPI
 - SQLAlchemy
+- MongoDB
 
 ---
 ## 👨‍🎨 Logotipo de la aplicación 📷
