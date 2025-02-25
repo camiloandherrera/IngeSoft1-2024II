@@ -16,7 +16,7 @@ Repositorio grupal: Asignaciones y Entregas de Proyecto
 
 ## 📝 Plataforma para el seguimiento y la entrega de proyectos. ⏱️
 
-ProyecTrack es una aplicación destinada a la gestión y entrega remota de proyectos académicos, en donde profesores pueden crear y supervisar asignaciones, mientras que estudiantes pueden registrar avances y realizar entregas tanto intermedias como finales, en pro de la comunicación efectiva, seguimiento de progresos evaluación de entregas y entrega de retroalimentación de forma asíncrona y transparente.
+ProjecTrack es una aplicación destinada a la gestión y entrega remota de proyectos académicos, en donde profesores pueden crear y supervisar asignaciones, mientras que estudiantes pueden registrar avances y realizar entregas tanto intermedias como finales, en pro de la comunicación efectiva, seguimiento de progresos evaluación de entregas y entrega de retroalimentación de forma asíncrona y transparente.
 
 
 # 🧑‍💻 Tecnologías utilizadas 💾
