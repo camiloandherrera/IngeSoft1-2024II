@@ -1,11 +1,11 @@
-'''Tests for the application assemblement'''
+'''Main module for the FastAPI application'''
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 from database import get_db
-from models import person_model
-from services import person_service
+from models import user_model
+from services import user_service
 
 # mvc (view/api)
 
@@ -20,9 +20,19 @@ async def hello_root():
     return {"message": "Hello World!", "signs": "The ProjectTrack dev team"}
 
 @app.post("/users/add/", tags=["Users"])
-async def create_person(person: person_model.PersonModel):
+async def create_user(user: user_model.UserModel):
     '''Add an user to the database'''
-    result = person_service.PersonService().add_person(person_id = person.person_id, name = person.name)
+    result = user_service.UserService().add_user(user)
+
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+
+    return result
+
+@app.get("/users/get/{user_id}", tags=["Users"])
+async def get_user(user_id: int):
+    '''Get an user from the database'''
+    result = user_service.UserService().get_user(user_id)
 
     if "error" in result:
         raise HTTPException(status_code=400, detail=result["error"])
