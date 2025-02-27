@@ -1,8 +1,8 @@
 '''This module contains the user service class that processes the buisness logic
 data for the user model'''
 
-from repository import user_repo
-from models import user_model
+from ..repository import user_repo
+from ..models import user_model
 
 # mvc (controller/service)
 
@@ -21,7 +21,7 @@ class UserService:
         else:
             try:
                 result = self.repo.add_user(user)
-                return {"msg": "User added succesfully.", "id": str(result.inserted_id)}
+                return {"msg": "User added successfully.", "id": str(result.inserted_id)}
             except Exception as e:
                 return {"error": f"Connection error or insert error: {e}"}
 

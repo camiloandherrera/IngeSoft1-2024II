@@ -3,7 +3,7 @@
 from typing import Literal
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, EmailStr
-from conexion_mongo import agregar_usuario, eliminar_usuario
+from .conexion_mongo import agregar_usuario, eliminar_usuario
 
 app = FastAPI(title="ProjecTrack")
 app.title = "Seguimiento de proyectos academicos"

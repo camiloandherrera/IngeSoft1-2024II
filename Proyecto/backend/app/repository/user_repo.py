@@ -1,7 +1,7 @@
 '''Repository module for user modifications in database'''
 
-from database import get_db
-from models import user_model
+from ..database import get_db
+from ..models import user_model
 
 from bson import ObjectId
 
