@@ -3,7 +3,7 @@
 from typing import Literal
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, EmailStr
-from conexion_mongo import agregar_usuario, eliminar_usuario
+from Proyecto.backend.conexion_mongo import agregar_usuario, eliminar_usuario
 
 app = FastAPI(title="ProjecTrack")
 app.title = "Seguimiento de proyectos academicos"
@@ -33,22 +33,21 @@ class Usuario(BaseModel):
     activo: bool
     tipo_de_usuario: Literal["administrador", "profesor", "estudiante"]
 
-
-@app.post("/usuarios/", tags=["Usuarios"])
-def crear_usuario(usuario: Usuario):
-    """Add an user to the database"""
+# Agregacion de un usuario a la BD
+@app.post("/usuarios/", tags=['Usuarios'], status_code=201)
+async def crear_usuario(usuario: Usuario):
     resultado = agregar_usuario(
-        cedula=usuario.cedula,
-        nombre=usuario.nombre,
-        email=usuario.email,
-        edad=usuario.edad,
+        cedula=usuario.cedula, 
+        nombre=usuario.nombre, 
+        email=usuario.email, 
+        edad=usuario.edad, 
         activo=usuario.activo,
-        tipo_de_usuario=usuario.tipo_de_usuario,
+        tipo_de_usuario=usuario.tipo_de_usuario
     )
 
     if "error" in resultado:
-        raise HTTPException(status_code=400, detail=resultado["error"])
-
+        raise HTTPException(status_code=409, detail=resultado["error"])
+    
     return resultado
 
 
@@ -58,6 +57,9 @@ async def delete_user(cedula: int):
     resultado = eliminar_usuario(cedula=cedula)
 
     if "error" in resultado:
-        raise HTTPException(status_code=400, detail=resultado["error"])
-
+        raise HTTPException(status_code=404, detail=resultado["error"])
+    
     return resultado
+
+if __name__ == "__main__":
+    hello_root()
