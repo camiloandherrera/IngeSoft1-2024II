@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django,python,pycharm,windows,visualstudiocode,react,reactnative,vuejs
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,python,pycharm,windows,visualstudiocode,react,reactnative,vuejs
 
+# TODO: Remove excess/unused comments in this file.
+
 ### Django ###
 *.log
 *.pot
