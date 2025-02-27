@@ -3,7 +3,7 @@
 from typing import Literal
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, EmailStr
-from Proyecto.backend.conexion_mongo import agregar_usuario, eliminar_usuario
+from conexion_mongo import agregar_usuario, eliminar_usuario
 
 app = FastAPI(title="ProjecTrack")
 app.title = "Seguimiento de proyectos academicos"
@@ -37,17 +37,17 @@ class Usuario(BaseModel):
 @app.post("/usuarios/", tags=['Usuarios'], status_code=201)
 async def crear_usuario(usuario: Usuario):
     resultado = agregar_usuario(
-        cedula=usuario.cedula, 
-        nombre=usuario.nombre, 
-        email=usuario.email, 
-        edad=usuario.edad, 
+        cedula=usuario.cedula,
+        nombre=usuario.nombre,
+        email=usuario.email,
+        edad=usuario.edad,
         activo=usuario.activo,
         tipo_de_usuario=usuario.tipo_de_usuario
     )
 
     if "error" in resultado:
         raise HTTPException(status_code=409, detail=resultado["error"])
-    
+
     return resultado
 
 
@@ -58,7 +58,7 @@ async def delete_user(cedula: int):
 
     if "error" in resultado:
         raise HTTPException(status_code=404, detail=resultado["error"])
-    
+
     return resultado
 
 if __name__ == "__main__":

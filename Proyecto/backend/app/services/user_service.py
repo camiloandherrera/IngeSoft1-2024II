@@ -35,3 +35,15 @@ class UserService:
                 return exists
             except Exception as e:
                 return {"error": f"Connection error or insert error: {e}"}
+
+    def delete_user(self, user_id: int):
+        '''Deletes a user from the database'''
+        exists = self.repo.get_user(user_id)
+        if not exists:
+            return {"error": f"User not found."}
+        else:
+            try:
+                self.repo.delete_user(user_id)
+                return {"msg": "User deleted succesfully.", "id": user_id}
+            except Exception as e:
+                return {"error": f"Connection error or delete error: {e}"}

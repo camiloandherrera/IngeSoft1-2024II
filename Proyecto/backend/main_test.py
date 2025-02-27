@@ -1,9 +1,9 @@
 from fastapi import HTTPException
 import pytest
-from Proyecto.backend.main import crear_usuario, delete_user, Usuario
+from app.main import crear_usuario, delete_user, Usuario
 
 
-@pytest.mark.asyncio 
+@pytest.mark.asyncio
 async def test_crear_usuario_NO_existente():
     cedula = 1
     nombre = "Jose"
@@ -40,7 +40,7 @@ async def test_crear_usuario_NO_existente():
 
     assert resultado_esperado == resultado
 
-@pytest.mark.asyncio 
+@pytest.mark.asyncio
 async def test_crear_usuario_ya_existente():
     cedula = 1
     nombre = "Jose"
@@ -64,7 +64,7 @@ async def test_crear_usuario_ya_existente():
         await crear_usuario(usuario)
     except:
         pass
-    
+
     resultado = ""
 
     try:
@@ -75,7 +75,7 @@ async def test_crear_usuario_ya_existente():
     assert resultado.status_code == resultado_esperado.status_code
     assert resultado.detail == resultado_esperado.detail
 
-@pytest.mark.asyncio 
+@pytest.mark.asyncio
 async def test_eliminar_usuario_ya_existente():
     cedula = 1
 
@@ -85,7 +85,7 @@ async def test_eliminar_usuario_ya_existente():
         await crear_usuario(Usuario(cedula=cedula))
     except:
         pass
-    
+
     resultado = ""
 
     try:
@@ -95,7 +95,7 @@ async def test_eliminar_usuario_ya_existente():
 
     assert resultado== resultado_esperado
 
-@pytest.mark.asyncio 
+@pytest.mark.asyncio
 async def test_eliminar_usuario_NO_existente():
     cedula = 1
 
@@ -105,7 +105,7 @@ async def test_eliminar_usuario_NO_existente():
         await delete_user(cedula)
     except:
         pass
-    
+
     resultado = ""
 
     try:

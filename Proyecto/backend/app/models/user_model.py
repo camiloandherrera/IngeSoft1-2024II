@@ -5,7 +5,8 @@ from typing import List, Optional
 from datetime import datetime
 from bson import ObjectId
 
-# mvc (model)
+# mvc (model) and schemas (DTO, Data Transfer Object)
+# TODO: Separate the models from the schemas
 
 class UserModel(BaseModel):
     '''User scheme with Pydantic validations'''

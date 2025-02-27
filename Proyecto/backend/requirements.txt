@@ -1,3 +1,4 @@
 fastapi[standard]==0.115.8
 asyncer==0.0.8
 pymongo==4.11.1
+pytest==8.3.4

@@ -25,3 +25,7 @@ class UserRepository:
         user_dict['_id'] = user_dict.pop('user_id')  # Set user_id as _id
         user_dict['password'] = user.password.get_secret_value()  # Convert SecretStr to string
         return self.collection.insert_one(user_dict)
+
+    def delete_user(self, user_id: int):
+        '''Deletes a user from the database'''
+        return self.collection.delete_one({"_id": user_id})

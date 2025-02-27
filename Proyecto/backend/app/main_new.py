@@ -8,6 +8,7 @@ from models import user_model
 from services import user_service
 
 # mvc (view/api)
+# TODO: Separate the views/endpoints from the main module
 
 app = FastAPI(title="ProjecTrack")
 app.title = "Seguimiento de tareas académicas"
@@ -20,7 +21,7 @@ async def hello_root():
     return {"message": "Hello World!", "signs": "The ProjectTrack dev team"}
 
 @app.post("/users/add/", tags=["Users"])
-async def create_user(user: user_model.UserModel):
+async def add_user(user: user_model.UserModel):
     '''Add an user to the database'''
     result = user_service.UserService().add_user(user)
 
@@ -36,5 +37,15 @@ async def get_user(user_id: int):
 
     if "error" in result:
         raise HTTPException(status_code=400, detail=result["error"])
+
+    return result
+
+@app.delete("/users/delete/{user_id}", tags=["Users"])
+async def delete_user(user_id: int):
+    '''Delete an user from the database'''
+    result = user_service.UserService().delete_user(user_id)
+
+    if "error" in result:
+        raise HTTPException(status_code=404, detail=result["error"])
 
     return result
