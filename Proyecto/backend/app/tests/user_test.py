@@ -94,6 +94,28 @@ async def test_get_existing_user():
     assert expected_result == result
 
 @pytest.mark.asyncio
+async def test_get_non_existent_user():
+    '''Test getting a non-existent user from the database'''
+    user_id = 3
+
+    expected_result = HTTPException(status_code=404, detail="User not found.")
+
+    try:
+        await delete_user(user_id)
+    except:
+        pass
+
+    result = ""
+
+    try:
+        result = await get_user(user_id)
+    except Exception as e:
+        result = e
+
+    assert result.status_code == expected_result.status_code
+    assert result.detail == expected_result.detail
+
+@pytest.mark.asyncio
 async def test_remove_existing_user():
     '''Test removing an existing user from the database'''
     user_id = 1

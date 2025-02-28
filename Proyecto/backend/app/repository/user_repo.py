@@ -1,4 +1,4 @@
-'''Repository module for user modifications in database'''
+'''Repository module for the user entity'''
 
 from ..database import get_db
 from ..models import user_model
@@ -13,7 +13,7 @@ class UserRepository:
 
     def __init__(self):
         '''Initializes user's repository'''
-        self.collection = get_db()["testable"]  # References its respective collection
+        self.collection = get_db()["users"]  # References its respective collection
 
     def get_user(self, user_id: int):
         '''Gets a user from the database'''
