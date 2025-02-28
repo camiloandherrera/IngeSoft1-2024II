@@ -3,8 +3,8 @@
 from pymongo import MongoClient
 
 # MongoDB connection URI
-MONGO_URI = "mongodb://localhost:27017/"
-# MONGO_URI = "mongodb+srv://Administrador:PttuZVjgwQeAckM5@cluster0.kqodv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+# MONGO_URI = "mongodb://localhost:27017/"
+MONGO_URI = "mongodb+srv://Administrador:PttuZVjgwQeAckM5@cluster0.kqodv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 class Database:
     '''Singleton class for the database connection'''
@@ -17,9 +17,8 @@ class Database:
         if cls._instance is None:
             cls._instance = super(Database, cls).__new__(cls)   # Creates the instance
             cls._instance.client = MongoClient(MONGO_URI)   # Connects to the database
-            cls._instance.db = cls._instance.client.test # "test" is my local test database
-            # remote db
-            # cls._instance.db = cls._instance.client["Base_de_datos_seguimiento_proyectos"]
+            #cls._instance.db = cls._instance.client.test # local db (for testing)
+            cls._instance.db = cls._instance.client["ProjecTrack_dev"] # remote db
 
         return cls._instance
 
