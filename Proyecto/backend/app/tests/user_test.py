@@ -1,8 +1,10 @@
+'''Tests for the user endpoints'''
+
 from fastapi import HTTPException
 import datetime
 import pytest
-from ..main_new import add_user, get_user, delete_user
-from ..models.user_model import UserModel
+from ..main import add_user, get_user, delete_user
+from models.user_model import UserModel
 
 # tests
 

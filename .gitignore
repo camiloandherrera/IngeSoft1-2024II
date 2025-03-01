@@ -26,7 +26,7 @@ media
 *.so
 
 # Distribution / packaging
-__init__.py
+#__init__.py
 .Python
 build/
 develop-eggs/

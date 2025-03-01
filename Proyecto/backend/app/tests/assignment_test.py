@@ -1,8 +1,10 @@
+'''Tests for the assignment endpoints'''
+
 from fastapi import HTTPException
 import datetime
 import pytest
-from ..main_new import add_assignment, get_assignment, delete_assignment
-from ..models.assignment_model import AssignmentModel
+from ..main import add_assignment, get_assignment, delete_assignment
+from models.assignment_model import AssignmentModel
 
 # tests
 

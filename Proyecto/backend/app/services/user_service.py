@@ -1,48 +1,35 @@
 '''User service class that processes the buisness logic ata for the user model'''
 
-from ..repository import user_repo
-from ..models import user_model
+from .base_service import BaseService
+from repository import user_repo
+from models import user_model
 
 # mvc (controller/service)
 
-class UserService:
+class UserService(BaseService):
     '''Process the buisness logic data for the user model'''
-    repo = None
+
     def __init__(self):
         '''Initializes user's service'''
         self.repo = user_repo.UserRepository()
 
-    def get_user(self, user_id: int):
-        '''Gets a user from the database'''
-        exists = self.repo.get_user(user_id)
-        if not exists:
-            return {"error": f"User not found."}
-        else:
-            try:
-                return exists
-            except Exception as e:
-                return {"error": f"Connection error or retrieve error: {e}"}
-
-    def add_user(self, user: user_model.UserModel):
+    def add(self, user: user_model.UserModel):
         '''Adds a user to the database'''
-        exists = self.repo.get_user(user.user_id)
-        if exists:
-            return {"error": f"User already exists. {exists}"}
-        else:
-            try:
-                result = self.repo.add_user(user)
-                return {"msg": "User added successfully.", "id": str(result.inserted_id)}
-            except Exception as e:
-                return {"error": f"Connection error or insert error: {e}"}
+        return super().add(user, "User")
 
-    def delete_user(self, user_id: int):
+    def get(self, user_id: int):
+        '''Gets a user from the database'''
+        return super().get(user_id, "User")
+
+    def update(self, user_id: int, updates: dict):
+        '''Updates a user in the database'''
+        return super().update(user_id, updates, "User")
+
+    def delete(self, user_id: int):
         '''Deletes a user from the database'''
-        exists = self.repo.get_user(user_id)
-        if not exists:
-            return {"error": f"User not found."}
-        else:
-            try:
-                self.repo.delete_user(user_id)
-                return {"msg": "User deleted succesfully.", "id": user_id}
-            except Exception as e:
-                return {"error": f"Connection error or delete error: {e}"}
+        return super().delete(user_id, "User")
+
+    def get_all(self):
+        '''Gets all users from the database; early development for
+        retrieval testing purposes'''
+        return super().get_all()

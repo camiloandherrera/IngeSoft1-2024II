@@ -1,35 +1,31 @@
 '''Repository for the assignment entity'''
 
-from ..database import get_db
-from ..models import assignment_model
+from .base_repo import BaseRepository
+from database import get_db
+from models.assignment_model import AssignmentModel
 
 from bson import ObjectId
 
 # repository
 
-class AssignmentRepository:
+class AssignmentRepository(BaseRepository):
     '''Repository class for assignment modifications in database'''
-    collection = None
 
     def __init__(self):
         '''Initializes assignment's repository'''
         self.collection = get_db()["assignments"]  # References its respective collection
 
-    def get_assignment(self, assignment_id: int):
-        '''Gets an assignment from the database'''
-        return self.collection.find_one({"_id": assignment_id})
-
-    def add_assignment(self, assignment: assignment_model.AssignmentModel):
+    def add(self, assignment: AssignmentModel):
         '''Adds an assignment to the database'''
-        assignment_dict = assignment.model_dump()
-        assignment_dict['_id'] = assignment_dict.pop('assignment_id')  # Set assignment_id as _id
-        return self.collection.insert_one(assignment_dict)
+        assignment_dict = assignment.model_dump(exclude={'assignment_id'})
+        return super().add(assignment_dict)
 
-    def delete_assignment(self, assignment_id: int):
-        '''Deletes an assignment from the database'''
-        return self.collection.delete_one({"_id": assignment_id})
+    def get(self, assignment_id: int):
+        '''Gets an assignment from the database'''
+        return super().get(assignment_id)
 
-    def get_assignments(self):
-        '''Gets all the assignments from the database; early development for
-        retrieval testing purposes'''
-        return self.collection.find()
+    def update(self, assignment_id: int, updates: dict):
+        return super().update(assignment_id, updates)
+
+    def delete(self, assignment_id: int):
+        return super().delete(assignment_id)

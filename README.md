@@ -22,7 +22,7 @@ ProjecTrack es una aplicación destinada a la gestión y entrega remota de proye
 # 🧑‍💻 Tecnologías utilizadas 💾
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-white?style=flat&logo=mongodb&logoColor=%2347A248)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-%23D71F00?style=flat&logo=sqlalchemy&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-%23E92063?logo=pydantic&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-ffca3a?style=flat&logo=python&logoColor=3776AB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![JS](https://img.shields.io/badge/JavaScript-black?style=flat&logo=javascript&logoColor=%23F7DF1E)
@@ -30,6 +30,8 @@ ProjecTrack es una aplicación destinada a la gestión y entrega remota de proye
 ![Vite](https://img.shields.io/badge/Vite-%23646CFF?logo=vite&logoColor=ffd42c)
 ![HTML5](https://img.shields.io/badge/HTML5-white?style=flat&logo=html5&logoColor=%23E34F26)
 ![CSS](https://img.shields.io/badge/CSS-white?style=flat&logo=css&logoColor=%23663399)
+![.env](https://img.shields.io/badge/.env-black?logo=dotenv&logoColor=%23ECD53F)
+
 
 Actualmente, el proyecto maneja las siguientes tecnologías para su funcionamiento:
 

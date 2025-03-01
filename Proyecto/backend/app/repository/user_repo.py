@@ -1,31 +1,39 @@
 '''Repository module for the user entity'''
 
-from ..database import get_db
-from ..models import user_model
+from .base_repo import BaseRepository
+from database import get_db
+from models.user_model import UserModel
 
 from bson import ObjectId
 
 # repository
 
-class UserRepository:
+class UserRepository(BaseRepository):
     '''Repository class for user modifications in database'''
-    collection = None
 
     def __init__(self):
         '''Initializes user's repository'''
         self.collection = get_db()["users"]  # References its respective collection
 
-    def get_user(self, user_id: int):
-        '''Gets a user from the database'''
-        return self.collection.find_one({"_id": user_id})
-
-    def add_user(self, user: user_model.UserModel):
+    def add(self, user: UserModel):
         '''Adds a user to the database'''
-        user_dict = user.model_dump()
-        user_dict['_id'] = user_dict.pop('user_id')  # Set user_id as _id
+        user_dict = user.model_dump(exclude={'user_id'})  # Exclude redundant entity_id from the model
         user_dict['password'] = user.password.get_secret_value()  # Convert SecretStr to string
-        return self.collection.insert_one(user_dict)
+        return super().add(user_dict)
 
-    def delete_user(self, user_id: int):
+    def get(self, user_id: int):
+        '''Gets a user from the database'''
+        return super().get(user_id)
+
+    def update(self, user_id: int, updates: dict):
+        '''Updates a user in the database'''
+        return super().update(user_id, updates)
+
+    def delete(self, user_id: int):
         '''Deletes a user from the database'''
-        return self.collection.delete_one({"_id": user_id})
+        return super().delete(user_id)
+
+    def get_all(self):
+        '''Gets all users from the database; early development for
+        retrieval testing purposes'''
+        return super().get_all()

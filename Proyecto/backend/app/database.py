@@ -2,8 +2,10 @@
 
 from pymongo import MongoClient
 
+# singleton
+
 # MongoDB connection URI
-# MONGO_URI = "mongodb://localhost:27017/"
+# MONGO_URI = "mongodb://localhost:27017/" #local db
 MONGO_URI = "mongodb+srv://Administrador:PttuZVjgwQeAckM5@cluster0.kqodv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 class Database:

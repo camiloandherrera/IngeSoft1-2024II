@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 import pytest
-from app.main import crear_usuario, delete_user, Usuario
+from . import crear_usuario, delete_user, Usuario
 
 
 @pytest.mark.asyncio
