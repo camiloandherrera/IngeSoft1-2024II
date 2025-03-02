@@ -21,14 +21,16 @@ ProjecTrack es una aplicación destinada a la gestión y entrega remota de proye
 
 # 🧑‍💻 Tecnologías utilizadas 💾
 
-![MongoDB](https://img.shields.io/badge/MongoDB-white?style=flat&logo=mongodb&logoColor=%2347A248)
+![MongoDB](https://img.shields.io/badge/MongoDB-white?style=flat&logo=mongodb&logoColor=)
 ![Pydantic](https://img.shields.io/badge/Pydantic-%23E92063?logo=pydantic&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-ffca3a?style=flat&logo=python&logoColor=3776AB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![JS](https://img.shields.io/badge/JavaScript-black?style=flat&logo=javascript&logoColor=%23F7DF1E)
+![Node.js](https://img.shields.io/badge/Node.js-%235FA04E?logo=nodedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-4dadc7?style=flat&logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-%23646CFF?logo=vite&logoColor=ffd42c)
-![HTML5](https://img.shields.io/badge/HTML5-white?style=flat&logo=html5&logoColor=%23E34F26)
+![ESLint](https://img.shields.io/badge/ESLint-%234B32C3?logo=eslint&logoColor=white)![HTML5](https://img.shields.io/badge/HTML5-white?style=flat&logo=html5&logoColor=%23E34F26)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2306B6D4?logo=tailwindcss&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-white?style=flat&logo=css&logoColor=%23663399)
 ![.env](https://img.shields.io/badge/.env-black?logo=dotenv&logoColor=%23ECD53F)
 

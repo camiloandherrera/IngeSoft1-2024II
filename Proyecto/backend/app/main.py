@@ -8,9 +8,9 @@ from services import user_service, assignment_service
 
 # mvc (view/api)
 
-app = FastAPI(title="ProjecTrack")
+app = FastAPI(title="ProjecTrack-backend")
 app.title = "Seguimiento de tareas académicas"
-app.version = "0.1.0"
+app.version = "0.0.4"
 
 # Basic hello world test
 @app.get("/greeting/", tags=["Greeting"])

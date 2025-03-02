@@ -1,3 +1,33 @@
 {
-
+        "name": "projectrack-frontend",
+        "version": "0.0.1",
+        "description": "Frontend for ProjecTrack",
+        "author": "ProjecTrack's dev team",
+        "license": "GPL-3.0-only",
+        "private": true,
+        "scripts": {
+            "dev": "vite",
+            "build": "vite build",
+            "preview": "vite preview",
+            "lint": "eslint . --fix"
+        },
+        "dependencies": {
+            "react": "^18.2.0",
+            "react-dom": "^18.2.0",
+            "react-router-dom": "^6.16.0",
+            "tailwindcss": "^3.4.1",
+            "@mui/material": "^5.15.0",
+            "@emotion/react": "^11.10.1",
+            "@emotion/styled": "^11.10.0"
+        },
+        "devDependencies": {
+            "@vitejs/plugin-react": "^4.2.1",
+            "vite": "^4.0.0",
+            "eslint": "^8.56.0",
+            "eslint-plugin-react": "^7.33.0",
+            "eslint-plugin-react-hooks": "^4.6.0",
+            "eslint-plugin-jsx-a11y": "^6.7.1",
+            "autoprefixer": "^10.4.16",
+            "postcss": "^8.4.33"
+        }
 }
