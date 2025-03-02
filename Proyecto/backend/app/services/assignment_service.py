@@ -2,8 +2,9 @@
 assignment model'''
 
 from .base_service import BaseService
-from repository import assignment_repo
-from models import assignment_model
+from factories.assignment_factory import AssignmentFactory
+from repository.assignment_repo import AssignmentRepository
+from models.assignment_model import AssignmentModel
 
 # mvc (controller/service)
 
@@ -12,9 +13,10 @@ class AssignmentService(BaseService):
 
     def __init__(self):
         '''Initializes assignment's service'''
-        self.repo = assignment_repo.AssignmentRepository()
+        self.factory = AssignmentFactory()
+        self.repo = AssignmentRepository()
 
-    def add(self, assignment: assignment_model.AssignmentModel):
+    def add(self, assignment: AssignmentModel):
         '''Adds an assignment to the database'''
         return super().add(assignment, "Assignment")
 

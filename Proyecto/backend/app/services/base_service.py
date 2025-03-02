@@ -1,21 +1,27 @@
 '''Base service class that provides common CRUD operations in services'''
 
+from factories.base_factory import BaseFactory
+from models.base_entity_model import BaseEntityModel
+from repository.base_repo import BaseRepository
+
 from abc import ABC
 
 # mvc (controller/service)
 
 class BaseService(ABC):
     '''Base service class that provides common CRUD operations'''
-    repo = None
+    factory: BaseFactory = None
+    repo: BaseRepository = None
 
-    def add(self, entity, entity_name: str):
+    def add(self, entity_data: BaseEntityModel, entity_name: str):
         '''Adds an entity to the database'''
-        exists = self.repo.get(entity.entity_id)
+        exists = self.repo.get(entity_data.entity_id)
         if exists:
             return {"error": f"{entity_name} already exists. {exists}"}
         else:
             try:
-                result = self.repo.add(entity)
+                new_entity = self.factory.create(entity_data)
+                result = self.repo.add(new_entity)
                 return {"msg": f"{entity_name} added successfully.", "_id": str(result.inserted_id)}
             except Exception as e:
                 return {"error": f"Connection error or insert error: {e}"}

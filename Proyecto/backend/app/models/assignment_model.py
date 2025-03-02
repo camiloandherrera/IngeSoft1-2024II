@@ -5,7 +5,6 @@ from .base_entity_model import BaseEntityModel
 from pydantic import Field, model_validator
 from typing import Optional
 from datetime import datetime
-from bson import ObjectId
 
 # mvc (model) and schemas (DTO, Data Transfer Object)
 # TODO: Separate the models from the schemas

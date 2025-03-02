@@ -1,8 +1,9 @@
 '''User service class that processes the buisness logic ata for the user model'''
 
 from .base_service import BaseService
-from repository import user_repo
-from models import user_model
+from factories.user_factory import UserFactory
+from repository.user_repo import UserRepository
+from models.user_model import UserModel
 
 # mvc (controller/service)
 
@@ -11,9 +12,10 @@ class UserService(BaseService):
 
     def __init__(self):
         '''Initializes user's service'''
-        self.repo = user_repo.UserRepository()
+        self.factory = UserFactory()
+        self.repo = UserRepository()
 
-    def add(self, user: user_model.UserModel):
+    def add(self, user: UserModel):
         '''Adds a user to the database'''
         return super().add(user, "User")
 

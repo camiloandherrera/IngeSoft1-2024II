@@ -4,8 +4,6 @@ from .base_repo import BaseRepository
 from database import get_db
 from models.user_model import UserModel
 
-from bson import ObjectId
-
 # repository
 
 class UserRepository(BaseRepository):

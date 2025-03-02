@@ -1,7 +1,7 @@
 '''Base model module with Pydantic validations'''
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from bson import ObjectId
 from abc import ABC
 
 # mvc (model) and schemas (DTO, Data Transfer Object)

@@ -12,7 +12,7 @@ class BaseRouter(ABC):
 
     # Base CRUD endpoints
 
-    async def add(self, entity):
+    async def add(self, entity: dict):
         '''Adds an entity to the database'''
         result = self.service.add(entity)
 

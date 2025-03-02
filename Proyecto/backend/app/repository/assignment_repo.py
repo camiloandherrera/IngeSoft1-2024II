@@ -4,8 +4,6 @@ from .base_repo import BaseRepository
 from database import get_db
 from models.assignment_model import AssignmentModel
 
-from bson import ObjectId
-
 # repository
 
 class AssignmentRepository(BaseRepository):

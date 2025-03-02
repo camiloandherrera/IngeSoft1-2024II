@@ -5,14 +5,12 @@ from .base_entity_model import BaseEntityModel
 from pydantic import Field, SecretStr, EmailStr, model_validator
 from typing import Optional
 from datetime import datetime
-from bson import ObjectId
 
 # mvc (model) and schemas (DTO, Data Transfer Object)
 # TODO: Separate the models from the schemas
 
 class UserModel(BaseEntityModel):
     '''User scheme with Pydantic validations'''
-
     user_id: int = Field(
         ..., gt=0, description="Must be a positive integer."
     )
