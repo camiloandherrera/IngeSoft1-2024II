@@ -23,7 +23,14 @@ class AssignmentRepository(BaseRepository):
         return super().get(assignment_id)
 
     def update(self, assignment_id: int, updates: dict):
+        '''Updates an assignment in the database'''
         return super().update(assignment_id, updates)
 
     def delete(self, assignment_id: int):
+        '''Deletes an assignment from the database'''
         return super().delete(assignment_id)
+
+    def get_all(self):
+        '''Gets all assignments from the database; early development for
+        retrieval testing purposes'''
+        return super().get_all()

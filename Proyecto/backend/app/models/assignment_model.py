@@ -25,7 +25,7 @@ class AssignmentModel(BaseEntityModel):
     )
 
     assignment_date: datetime = Field(
-        ..., description="Assignment asignment date."
+        ..., default_factory=datetime.now, description="Assignment asignment date."
     )
 
     deadline: Optional[datetime] = Field(

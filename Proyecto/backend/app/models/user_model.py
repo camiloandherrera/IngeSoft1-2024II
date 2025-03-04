@@ -44,7 +44,7 @@ class UserModel(BaseEntityModel):
     )
 
     sign_up_date: datetime = Field(
-        ..., description="Date of sign up."
+        ..., default_factory=datetime.now, description="Date of sign up."
     )
 
     role_id: int = Field(

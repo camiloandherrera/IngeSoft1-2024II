@@ -14,7 +14,7 @@ class AssignmentFactory(BaseFactory):
             assignment_id = assignment.assignment_id,
             title = assignment.title,
             description = assignment.description,
-            assignment_date= datetime.now(),
+            assignment_date = assignment.assignment_date,
             deadline = assignment.deadline,
             class_id = assignment.class_id
        )

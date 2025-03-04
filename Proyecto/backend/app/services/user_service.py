@@ -2,8 +2,8 @@
 
 from .base_service import BaseService
 from factories.user_factory import UserFactory
-from repository.user_repo import UserRepository
 from models.user_model import UserModel
+from repository.user_repo import UserRepository
 
 # mvc (controller/service)
 

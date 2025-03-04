@@ -2,9 +2,8 @@
 
 from fastapi import FastAPI, HTTPException
 
-from models import user_model, assignment_model
-from routes import user_router, assignment_router
-from services import user_service, assignment_service
+from routes import user_router, assignment_router, student_assignment_router,\
+submission_router
 
 # mvc (view/api)
 
@@ -21,3 +20,5 @@ async def hello_root():
 # Include routers
 app.include_router(user_router.router)
 app.include_router(assignment_router.router)
+app.include_router(student_assignment_router.router)
+app.include_router(submission_router.router)

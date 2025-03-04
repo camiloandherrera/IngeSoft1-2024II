@@ -18,6 +18,6 @@ class UserFactory(BaseFactory):
             second_last_name = user.second_last_name,
             email = user.email,
             password = user.password,
-            sign_up_date = datetime.now(),
+            sign_up_date = user.sign_up_date,
             role_id = user.role_id
         )

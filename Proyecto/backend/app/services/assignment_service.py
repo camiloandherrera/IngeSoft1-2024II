@@ -1,10 +1,10 @@
-'''Assignment service class that processes the buisness ogic data for the
+'''Assignment service class that processes the buisness logic data for the
 assignment model'''
 
 from .base_service import BaseService
 from factories.assignment_factory import AssignmentFactory
-from repository.assignment_repo import AssignmentRepository
 from models.assignment_model import AssignmentModel
+from repository.assignment_repo import AssignmentRepository
 
 # mvc (controller/service)
 
