@@ -11,7 +11,7 @@ class StudentAssignmentRepository(BaseRepository):
 
     def __init__(self):
         '''Initializes students assignments' repository'''
-        self.collection = get_db()["students_assignments"]  # References its respective collection
+        self.collection = get_db()["student_assignments"]  # References its respective collection
 
     def add(self, assignment: StudentAssignmentModel):
         '''Adds a student assignment to the database'''

@@ -57,7 +57,7 @@ class BaseService(ABC):
             return {"error": f"{entity_name} not found."}
         else:
             try:
-                self.repo.delete(entity_id, entity_name)
+                self.repo.delete(entity_id)
                 return {"msg": f"{entity_name} deleted succesfully.", "entity_id": entity_id}
             except Exception as e:
                 return {"error": f"Connection error or delete error: {e}"}

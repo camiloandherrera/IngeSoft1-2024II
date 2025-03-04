@@ -15,7 +15,7 @@ class StudentAssignmentModel(BaseEntityModel):
     )
 
     student_id: list[int] = Field(
-        ..., description="Must be a list of positive integers."
+        default=[], description="Must be a list of positive integers."
     )
 
     # Pydantic model validator
