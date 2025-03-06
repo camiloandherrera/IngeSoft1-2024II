@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Login.css' // Archivo CSS para estilos personalizados
+import Logo from '../components/Logo.jsx'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -15,7 +16,7 @@ const Login = () => {
     <div className="login-container">
       <div className="background-overlay"></div>
       <div className="login-box">
-        <img src="/logo.svg" alt="Logo" className="login-logo" />
+        <Logo />
         <h2 style={{ marginTop: 0 + 'em' }}>Iniciar sesión</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
@@ -31,7 +32,7 @@ const Login = () => {
           </button>
         </form>
         <p className="register-link">
-          ¿No tienes una cuenta? <a href="#">Regístrate</a>
+          ¿No tienes una cuenta? <a href="/register">Regístrate</a>
         </p>
       </div>
     </div>

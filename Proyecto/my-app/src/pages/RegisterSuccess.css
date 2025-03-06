@@ -1,0 +1,57 @@
+/* RegisterSuccess.css */
+
+/* Contenedor principal */
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #6ba8e6, #375a7f);
+    text-align: center;
+    overflow: auto;
+    scrollbar-color: #6ba8e6 transparent;
+}
+
+/* Caja del mensaje de éxito */
+.success-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Icono de éxito */
+.success-icon {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Título */
+.success-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0 0 1rem 0;
+}
+
+.success-box img {
+    width: 300px;
+}
+
+/* Texto */
+.success-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Enlace */
+.success-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.success-box a:hover {
+    text-decoration: underline;
+}
