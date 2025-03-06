@@ -3,6 +3,7 @@
 from fastapi import APIRouter, HTTPException
 
 from .base_router import BaseRouter
+from auth.auth_bearer import verify_auth, verify_role
 from models.assignment_model import AssignmentModel
 from services.assignment_service import AssignmentService
 

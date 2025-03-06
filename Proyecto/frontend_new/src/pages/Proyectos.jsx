@@ -23,7 +23,6 @@ export default Proyectos;
 */
 
 // Tailwind CSS version
-/*
 import { proyectos } from "../data/proyectos";
 
 const Proyectos = () => {
@@ -48,8 +47,9 @@ const Proyectos = () => {
 };
 
 export default Proyectos;
-*/
 
+
+/*
 // Material UI version
 import { proyectos } from "../data/proyectos";
 import { Card, CardContent, Typography } from "@mui/material";
@@ -78,3 +78,4 @@ const Proyectos = () => {
 };
 
 export default Proyectos;
+*/

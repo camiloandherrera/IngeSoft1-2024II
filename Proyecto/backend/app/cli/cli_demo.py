@@ -9,7 +9,25 @@ import requests
 import datetime
 
 BASE_URL = "http://localhost:8000/"
+TOKEN = None
 CLASS_ID = 20 # Example class ID
+
+def login():
+    '''Login function for the user'''
+    global TOKEN
+    email = input("Enter your email: ")
+    password = input("Enter your password: ")
+
+    response = requests.post(f"{BASE_URL}/login", json={"email": email, "password": password})
+
+    if response.status_code != 200:
+        TOKEN = response.json()["access_token"]
+        print("🔓 Login successful!")
+        return response.json()["token_type"], response.json()["access_token"], response.json()["role"]
+        #response.json()["role"]
+    else:
+        print("🔒 Login failed. Please try again.")
+        return None
 
 def role_selection():
     '''Main menu: role selection for the user'''
@@ -123,9 +141,31 @@ def admin_menu():
                 submenu = False
                 break
 
+'''
+if __name__ == "__main__":
+    print("\n📓✍️ Welcome to ProjecTrack!(Early Demo)💻📊")
+
+    login_result = login()
+
+    if login_result:
+        token_type, token, role = login_result
+        TOKEN = token
+    while True:
+        # role = role_selection()
+        if role == "student":
+            role_number = 1
+        elif role == "professor":
+            role_number = 2
+        elif role == "admin":
+            role_number = 3
+
+        user_selection(role)
+'''
+
 
 if __name__ == "__main__":
     print("\n📓✍️ Welcome to ProjecTrack!(Early Demo)💻📊")
+
     while True:
         role = role_selection()
         user_selection(role)

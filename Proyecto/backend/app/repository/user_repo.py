@@ -35,3 +35,7 @@ class UserRepository(BaseRepository):
         '''Gets all users from the database; early development for
         retrieval testing purposes'''
         return super().get_all()
+
+    def get_by_email(self, email: str):
+        '''Gets a user by email from the database'''
+        return self.collection.find_one({"email": email})

@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI, HTTPException
 
-from routes import class_router, assignment_router, student_assignment_router,\
+from routes import auth, class_router, assignment_router, student_assignment_router,\
 submission_router, role_router, professor_router, student_router, user_router
 
 # mvc (view/api)
@@ -23,6 +23,8 @@ async def root():
     return {"message": "Welcome to the ProjectTrack API!"}
 
 # Include routers
+app.include_router(auth.router)
+
 app.include_router(class_router.router)
 app.include_router(assignment_router.router)
 app.include_router(student_assignment_router.router)
