@@ -1,8 +1,9 @@
 // Register.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Register.css'; // Archivo CSS para estilos personalizados
+import './Register.css';
 import Logo from '../components/Logo.jsx'
+import axios from 'axios';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -23,13 +24,19 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert('Las contraseñas no coinciden');
       return;
     }
-    navigate('/registerSuccess');
+    try {
+      const response = await axios.post('http://localhost:8000/register/', formData);
+      console.log(response.data);
+      navigate('/registerSuccess');
+    } catch (error) {
+        console.error(error);
+    }
   };
 
   return (

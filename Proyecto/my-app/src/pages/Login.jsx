@@ -1,16 +1,27 @@
 import { useState } from 'react'
 import './Login.css' // Archivo CSS para estilos personalizados
 import Logo from '../components/Logo.jsx'
+import axios from 'axios';
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Email:', email)
-    console.log('Password:', password)
-  }
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const response = await axios.post('http://localhost:8000/login/', formData);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+  };
 
   return (
     <div className="login-container">
@@ -21,11 +32,11 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label>Correo electrónico</label>
-            <input type="email" placeholder="correo@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type="email" placeholder="correo@example.com" onChange={handleChange} required />
           </div>
           <div className="input-group">
             <label>Contraseña</label>
-            <input type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <input type="password" placeholder="••••••••" onChange={handleChange} required />
           </div>
           <button type="submit" className="login-button">
             Iniciar sesión
