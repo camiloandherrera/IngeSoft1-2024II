@@ -39,7 +39,7 @@ class UserModel(BaseEntityModel):
     )
 
     password: SecretStr = Field(
-        ..., min_length=8, max_length=20, description="Password must be between 8 and 200 \
+        ..., min_length=8, max_length=200, description="Password must be between 8 and 200 \
             characters."
     )
 

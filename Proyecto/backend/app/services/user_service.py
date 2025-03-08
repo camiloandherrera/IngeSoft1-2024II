@@ -1,5 +1,6 @@
 '''User service class that processes the buisness logic ata for the user model'''
 
+from auth.security import hash_password
 from .base_service import BaseService
 from factories.user_factory import UserFactory
 from models.user_model import UserModel
@@ -17,6 +18,7 @@ class UserService(BaseService):
 
     def add(self, user: UserModel):
         '''Adds a user to the database'''
+        user.password = hash_password(user.password.get_secret_value())
         return super().add(user, "User")
 
     def get(self, user_id: int):
@@ -25,6 +27,8 @@ class UserService(BaseService):
 
     def update(self, user_id: int, updates: dict):
         '''Updates a user in the database'''
+        if 'password' in updates:
+            updates['password'] = hash_password(updates['password'])
         return super().update(user_id, updates, "User")
 
     def delete(self, user_id: int):

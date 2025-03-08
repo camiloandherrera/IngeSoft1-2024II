@@ -18,9 +18,9 @@ def login():
     email = input("Enter your email: ")
     password = input("Enter your password: ")
 
-    response = requests.post(f"{BASE_URL}/login", json={"email": email, "password": password})
+    response = requests.post(f"{BASE_URL}/login", json={"user_email": email, "user_password": password})
 
-    if response.status_code != 200:
+    if response.status_code == 200:
         TOKEN = response.json()["access_token"]
         print("🔓 Login successful!")
         return response.json()["token_type"], response.json()["access_token"], response.json()["role"]
@@ -141,7 +141,7 @@ def admin_menu():
                 submenu = False
                 break
 
-'''
+
 if __name__ == "__main__":
     print("\n📓✍️ Welcome to ProjecTrack!(Early Demo)💻📊")
 
@@ -160,12 +160,13 @@ if __name__ == "__main__":
             role_number = 3
 
         user_selection(role)
+
+
 '''
-
-
 if __name__ == "__main__":
     print("\n📓✍️ Welcome to ProjecTrack!(Early Demo)💻📊")
 
     while True:
         role = role_selection()
         user_selection(role)
+'''
