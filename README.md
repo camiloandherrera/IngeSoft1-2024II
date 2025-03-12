@@ -1,25 +1,25 @@
 
-# 📓✍️ ProyecTrack 💻📊
+### 📓✍️ ProyecTrack 💻📊
 
-## ⌨️ Ingeniería de Software 1 - 2024-2 G1 - Grupo 8 de Proyecto 🖱️
-Repositorio grupal: Asignaciones y Entregas de Proyecto
+# End-Of-Life repository
 
+This repository won't be mantained. **The Software Engineering I** class has succesfully finished, and the initial goals for this project have been met.
 
-## 👷Integrantes 🖥️
+Any further developments with new goals in mind will be spun-off to a new repository (TBD).
 
-* [Cristian Camilo García Palacios](https://github.com/CristianCamiloGarciaPalacios) (crgarciapa@unal.edu.co)
-* [Camilo Andrés Herrera Gutiérrez](https://github.com/camiloandherrera) (cherreragu@unal.edu.co)
-* [Andrés Giovanni Sastoque González](https://github.com/asastg) (asastoqueg@unal.edu.co)
-* [Diego Fernando Waitoto Quintero](https://github.com/asastg) (dwaitoto@unal.educ.co)
+---
 
+## ⌨️ Software Engineering I - 2024-2 G1 - Project Group # 8 🖱️
 
-
-## 📝 Plataforma para el seguimiento y la entrega de proyectos. ⏱️
-
-ProjecTrack es una aplicación destinada a la gestión y entrega remota de proyectos académicos, en donde profesores pueden crear y supervisar asignaciones, mientras que estudiantes pueden registrar avances y realizar entregas tanto intermedias como finales, en pro de la comunicación efectiva, seguimiento de progresos evaluación de entregas y entrega de retroalimentación de forma asíncrona y transparente.
+Group repository: Assignments and Group Deliveries.
 
 
-# 🧑‍💻 Tecnologías utilizadas 💾
+## 📝 Platform for following and delivering academic projects⏱️
+
+ProjecTrack is an application destined to help with the remote management and delivering of academic projects, where professors can create, assign and supervise assignments, whereas students can register their progress in the form of intermediate delivers, as well as making final delivers, with the purpose of establishing effective communication, progress tracking, delivery grading and feedback delivery, all in a transparent and asynchronous manner.
+
+
+# 🧑‍💻 Used technologies 💾
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-white?style=flat&logo=mongodb&logoColor=)
 ![Pydantic](https://img.shields.io/badge/Pydantic-%23E92063?logo=pydantic&logoColor=white)
@@ -35,7 +35,7 @@ ProjecTrack es una aplicación destinada a la gestión y entrega remota de proye
 ![.env](https://img.shields.io/badge/.env-black?logo=dotenv&logoColor=%23ECD53F)
 
 
-Actualmente, el proyecto maneja las siguientes tecnologías para su funcionamiento:
+Currently, the following technologies are used for the project's development:
 
 #### 🪟 Frontend 🖱️
 - HTML5
@@ -50,5 +50,12 @@ Actualmente, el proyecto maneja las siguientes tecnologías para su funcionamien
 - MongoDB
 
 ---
-## 👨‍🎨 Logotipo de la aplicación 📷
+## 👨‍🎨 Project's logo 📷
 ![ProjecTrack](https://github.com/user-attachments/assets/4be2aee8-8df0-45a0-9142-338aed8b085d)
+
+## 👷Group members 🖥️
+
+* [Cristian Camilo García](https://github.com/CristianCamiloGarciaPalacios)
+* [Camilo Herrera](https://github.com/camiloandherrera)
+* [Andrés Sastoque](https://github.com/asastg)
+* [Diego Waitoto](https://github.com/asastg)
